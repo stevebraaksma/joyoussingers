@@ -1,5 +1,5 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -29,7 +29,8 @@ const metadata = {
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title=""
+    id="about"
     stats={[
       { title: 'Concerts since 2000', amount: '200' },
       { title: 'Employees', amount: '248' },
@@ -96,6 +97,7 @@ const metadata = {
 
   <Steps2
     title="Reach out to us"
+    id="contact-us"
     subtitle="Have questions? Feel free to contact us!"
     callToAction={{
       text: 'Contact us',
@@ -105,18 +107,21 @@ const metadata = {
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: 'mailto:mary.muse123@gmail.com',
         icon: 'tabler:mail',
+        link: 'mailto:mary.muse123@gmail.com',
       },
       {
         title: 'Call us',
-        description: '+1 (234) 567-890',
+        description: '(502) 807-5997',
         icon: 'tabler:headset',
+        link: 'tel:5028075997',
       },
       {
         title: 'Follow us on Facebook',
         description: 'JoyousSingers',
         icon: 'tabler:brand-facebook',
+        link: 'https://www.facebook.com/JoyousSingers/',
       },
     ]}
   />

@@ -21,8 +21,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      The Joyous Singers is a community-based chorus based in the Louisville-Kentuckiana area. We sing a variety of
-      musical styles; sacred, Broadway, popular, gospel, etc.
+      <!-- The Joyous Singers is a community-based chorus based in the Louisville-Kentuckiana area. We sing a variety of
+      musical styles; sacred, Broadway, popular, gospel, etc. -->
+      Led by our inspiring music director, Mary Muse, with accompaniment by Gloria Nimocks, Joyous Singers is a community
+      chorus dedicated to bringing the people of our Kentuckiana community beautiful, uplifting, and entertaining choral
+      music. We specialize in providing concerts for underserved populations, especially those in senior living and health
+      communities. Our daytime performances and rehearsals make it possible for community singers who prefer daytime activities
+      to participate.
     </Fragment>
   </Hero>
 
@@ -126,3 +131,92 @@ const metadata = {
     ]}
   />
 </Layout>
+
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
+<form class="max-w-md mx-auto">
+  <!-- Name -->
+  <div class="relative z-0 w-full mb-5 group">
+    <input
+      type="text"
+      name="name"
+      id="name"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    />
+    <label
+      for="name"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Name</label
+    >
+  </div>
+
+  <!-- Email -->
+  <div class="relative z-0 w-full mb-5 group">
+    <input
+      type="email"
+      name="email"
+      id="email"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    />
+    <label
+      for="email"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Email Address</label
+    >
+  </div>
+
+  <!-- Subject -->
+  <div class="relative z-0 w-full mb-5 group">
+    <input
+      type="text"
+      name="subject"
+      id="subject"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder=" "
+      required
+    />
+    <label
+      for="subject"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Subject</label
+    >
+  </div>
+
+  <!-- Message -->
+  <div class="relative z-0 w-full mb-5 group">
+    <textarea
+      name="message"
+      id="message"
+      rows="4"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer resize-none"
+      placeholder=" "
+      required></textarea>
+    <label
+      for="message"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Message</label
+    >
+  </div>
+
+  <!-- Submit Button -->
+  <button
+    type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  >
+    Submit
+  </button>
+</form>

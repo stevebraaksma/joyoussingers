@@ -1,0 +1,119 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+// import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features4 from '~/components/widgets/Features4.astro';
+// import Testimonials from '~/components/widgets/Testimonials.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+
+// import Button from '~/components/ui/Button.astro';
+// import Image from '~/components/common/Image.astro';
+
+// const appStoreImg = '~/assets/images/app-store.png';
+// const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+
+// const googlePlayImg = '~/assets/images/google-play.png';
+// const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const metadata = {
+  title: 'Mobile App Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      position="center"
+      links={[
+        { text: 'Home', href: '/' },
+        { text: 'Events', href: '/events' },
+        { text: 'Donate', href: '/donate' },
+        { text: 'Contact', href: '/contact' },
+      ]}
+      actions={[
+        {
+          text: 'Download',
+          href: '#download',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features4
+    id="features"
+    title="Events"
+    subtitle="Join the Joyous Singers for a heartfelt season of spring performances across our community. Everyone is welcome!"
+    tagline=""
+    columns={2}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Treyton Oak Towers',
+        description: 'Thursday, May 8, 3:00pm',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'The Forum',
+        description: 'Thursday, May 15, 2:00pm',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Lyndon Baptist Church',
+        description: 'Sunday, May 18, 2:00pm',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Village Crossing Retirement Community',
+        description: 'Tuesday, May 20, 2:00pm',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Altenheim Senior Healthcare Facility',
+        description: 'Thursday, May 22nd, 11:00am',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        May Concert Venues, Spring 2025
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    id="download"
+    title="Download our app now!"
+    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
+  >
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </CallToAction> -->
+</Layout>

@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Donate',
-      href: '/donate',
+      href: 'https://www.giveforgoodlouisville.org/organization/Joyous-Singers',
     },
     {
       text: 'Contact',

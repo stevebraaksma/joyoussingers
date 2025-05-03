@@ -1,6 +1,6 @@
 site:
   name: Joyous Singers
-  site: 'https://joyoussingers.netlify.app'
+  site: 'https://joyoussingers.org'
   base: '/'
   trailingSlash: false
 

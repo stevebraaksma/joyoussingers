@@ -11,7 +11,7 @@ metadata:
   title:
     default: Joyous Singers
     template: '%s — Joyous Singers'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: 'Joyous Singers is a community chorus dedicated to bringing the people of our Kentuckiana community beautiful, uplifting, and entertaining choral music.'
   robots:
     index: true
     follow: true

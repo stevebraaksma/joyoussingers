@@ -27,8 +27,8 @@ metadata:
     site: '@onwidget'
     cardType: summary_large_image
 
-  google-site-verification:
-    content: RbsOU4oUkDUuIDwX-hyzAL3XwIhJCF5hKCFrryiAU0M
+  # google-site-verification:
+  #   content: RbsOU4oUkDUuIDwX-hyzAL3XwIhJCF5hKCFrryiAU0M
 
 i18n:
   language: en

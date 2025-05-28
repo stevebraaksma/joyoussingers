@@ -3,6 +3,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 // import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features4 from '~/components/widgets/Features4.astro';
 
 const metadata = {
   title: 'Contact',
@@ -13,11 +15,38 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <!-- Features3 Widget ************** -->
+
+  <Features4
+    id="features"
+    title="Contact"
+    subtitle="Whether you're a lifelong singer or just discovering the joy of music, you're warmly invited to join our vibrant choir community. Our rehearsals are relaxed, uplifting, and designed to suit all experience levels — no auditions, no pressure, just the shared joy of singing. We explore a rich variety of music across seasons, culminating in performances that inspire and uplift both singers and audiences alike."
+    tagline=""
+    columns={2}
+  />
+
+  <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Mary Muse',
+        description: 'Director',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{ src: '~/assets/images/MaryMuse.jpg', alt: 'Joyous Singers in Concert' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Staff</h3>
+    </Fragment>
+  </Content>
+
+  <HeroText tagline="Contact" title="Join Us!" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
+    title="Contact our director, Mary Muse"
     inputs={[
       {
         type: 'text',

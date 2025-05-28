@@ -19,6 +19,7 @@ import Features4 from '~/components/widgets/Features4.astro';
 
 // const googlePlayImg = '~/assets/images/google-play.png';
 // const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
   title: 'Mobile App Homepage',
@@ -42,12 +43,36 @@ const metadata = {
 
   <!-- Features3 Widget ************** -->
 
-  <Features4
-    id="features"
-    title="Events"
-    subtitle="Join the Joyous Singers for a heartfelt season of spring performances across our community. Everyone is welcome!"
-    tagline=""
-    columns={2}
+  <Features4 id="features" title="History" subtitle="Learn more about our history" tagline="" columns={2} />
+
+  <Steps2
+    title="Jeffersontown Magazine"
+    id="contact-us"
+    subtitle="Now That's Harmony - Joyous Singers Group Celebrates 25 Years"
+    callToAction={{
+      text: 'Read the Article',
+      href: 'https://issuu.com/tombritt/docs/jeffersontown_225-issuu/21',
+    }}
+    items={[
+      // {
+      //   title: 'Email us',
+      //   description: 'mailto:mary.muse123@gmail.com',
+      //   icon: 'tabler:mail',
+      //   link: 'mailto:mary.muse123@gmail.com',
+      // },
+      // {
+      //   title: 'Call us',
+      //   description: '(502) 807-5997',
+      //   icon: 'tabler:headset',
+      //   link: 'tel:5028075997',
+      // },
+      // {
+      //   title: 'Follow us on Facebook',
+      //   description: 'JoyousSingers',
+      //   icon: 'tabler:brand-facebook',
+      //   link: 'https://www.facebook.com/JoyousSingers/',
+      // },
+    ]}
   />
 
   <!-- Content Widget **************** -->

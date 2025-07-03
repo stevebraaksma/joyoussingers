@@ -15,8 +15,8 @@ export const headerData = {
       href: 'https://www.giveforgoodlouisville.org/organization/Joyous-Singers',
     },
     {
-      text: 'History',
-      href: '/history',
+      text: 'Who We Are',
+      href: '/who-we-are',
     },
     {
       text: 'Contact',

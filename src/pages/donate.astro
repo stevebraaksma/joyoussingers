@@ -1,0 +1,111 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+// import HeroText from '~/components/widgets/HeroText.astro';
+// import ContactUs from '~/components/widgets/Contact.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+// import Content from '~/components/widgets/Content.astro';
+import Features4 from '~/components/widgets/Features4.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<!-- subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you." -->
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <!-- Features3 Widget ************** -->
+
+  <Features4
+    id="donate"
+    title="Donate"
+    subtitle="Our Joyous Singers' Mission is to bring to the people of our Kentuckiana community beautiful, competently performed and uplifting choral music; as well as some humor, some memories and hopefully the little shiver in the spine that happens only when music really moves you. But to do this, we need your help and support. <br><br>Your contribution as a donor or as an advertiser would help us meet our expenses for sheet music, direction, accompanists and so much more. Please help us to continue to provide our community with the joy of good music by donating or sponsoring space in our program."
+    tagline=""
+    columns={2}
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Pricing
+    title=""
+    prices={[
+      {
+        title: 'Sponsor',
+        subtitle: 'Sponsor space in our program, showing your own special message. $30, $60 and $120 spaces.',
+        price: 15,
+        period: '/ month',
+        callToAction: {
+          // target: '_blank',
+          text: 'Contact Us to Sponsor',
+          href: '#',
+        },
+      },
+      {
+        title: 'Donate',
+        subtitle: 'Make a one-time donation, or set up a recurring donation.',
+        price: 15,
+        period: '/ Month',
+        callToAction: {
+          // target: '_blank',
+          text: 'Donate Now',
+          href: '#donorbox',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'donorbox',
+      },
+      {
+        title: 'Give for Good Louisville',
+        subtitle:
+          'The 12th annual Give for Good Louisville returns on September 18, 2025, from midnight to 11:59 p.m. ET.',
+
+        callToAction: {
+          target: '_blank',
+          text: 'Give on Septermber 18, 2025',
+          href: 'https://www.giveforgoodlouisville.org/organization/Joyous-Singers',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+  <!-- <Content
+    isReversed
+    items={[
+      {
+        title: 'Mary Muse',
+        description: 'Director',
+        icon: 'tabler:wand',
+      },
+    ]}
+    image={{ src: '~/assets/images/MaryMuse.jpg', alt: 'Joyous Singers in Concert' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Staff</h3>
+    </Fragment>
+  </Content> -->
+
+  <!-- <HeroText tagline="Contact" title="Join Us!" /> -->
+
+  <!-- <ContactUs
+    id="form"
+    title="Contact our director, Mary Muse"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    description=""
+  /> -->
+</Layout>

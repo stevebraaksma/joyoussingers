@@ -33,7 +33,7 @@ const metadata = {
       links={[
         { text: 'Home', href: '/' },
         { text: 'Events', href: '/events' },
-        { text: 'Donate', href: 'https://www.giveforgoodlouisville.org/organization/Joyous-Singers' },
+        { text: 'Donate', href: '/donate' },
         { text: 'Who We Are', href: '/who-we-are' },
         { text: 'Contact', href: '/contact' },
       ]}
@@ -53,6 +53,42 @@ const metadata = {
   <!-- Content Widget **************** -->
   <Content
     isReversed
+    items={[
+      {
+        title: 'Coming Soon',
+        description: '',
+        icon: 'tabler:wand',
+      },
+      // {
+      //   title: 'The Forum',
+      //   description: 'Thursday, May 15, 2:00pm',
+      //   icon: 'tabler:wand',
+      // },
+      // {
+      //   title: 'Lyndon Baptist Church',
+      //   description: 'Sunday, May 18, 2:00pm',
+      //   icon: 'tabler:wand',
+      // },
+      // {
+      //   title: 'Village Crossing Retirement Community',
+      //   description: 'Tuesday, May 20, 2:00pm',
+      //   icon: 'tabler:wand',
+      // },
+      // {
+      //   title: 'Altenheim Senior Healthcare Facility',
+      //   description: 'Thursday, May 22nd, 11:00am',
+      //   icon: 'tabler:wand',
+      // },
+    ]}
+    image={{ src: '~/assets/images/2019-Chorale.jpeg', alt: 'Joyous Singers in Concert' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Upcoming Events, Fall 2025</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <Content
     items={[
       {
         title: 'Treyton Oak Towers',
@@ -83,9 +119,7 @@ const metadata = {
     image={{ src: '~/assets/images/2019-Chorale.jpeg', alt: 'Joyous Singers in Concert' }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        May Concert Venues, Spring 2025
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Past Events, Spring 2025</h3>
     </Fragment>
   </Content>
 

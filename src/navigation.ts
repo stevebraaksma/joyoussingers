@@ -37,6 +37,7 @@ export const footerData = {
         { text: 'Events', href: '/events' },
         { text: 'Donate', href: '/donate' },
         { text: 'Who We Are', href: '/who-we-are' },
+        { text: 'Recruiting New Singers', href: '/#recruiting' },
         { text: 'Contact', href: '/contact' },
         { text: 'Gallery', href: '/who-we-are#gallery' },
         { text: 'History', href: '/who-we-are#history' },

@@ -2,6 +2,7 @@
 // import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Button from '~/components/ui/Button.astro';
@@ -22,7 +23,7 @@ const metadata = {
         text: 'Donate',
         href: '/donate',
       },
-      { text: 'Join Us', href: '/contact' },
+      { text: 'Join Us', href: '#recruiting' },
     ]}
     image={{ src: '~/assets/images/2019-JS-Christmas.jpeg', alt: 'Joyous Singers' }}
   >
@@ -104,6 +105,48 @@ const metadata = {
       },
     ]}
   />
+
+  <Hero2
+    id="recruiting"
+    tagline="Sing Out"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Contact the Director', href: 'contact#form' },
+      // { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <!-- <Fragment slot="title">
+      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white">SaaS</span> companion<br
+      />
+    </Fragment> -->
+    <Fragment slot="title">
+      <span class="text-4xl md:text-5xl"> Recruiting New Singers </span>
+    </Fragment>
+    <!-- 
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Elevate your website creation process with <span class="font-semibold">AstroWind</span>'s SaaS solutions.</span
+      >
+      Seamlessly blend the power of Astro 5.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
+    </Fragment> -->
+
+    <Fragment slot="subtitle">
+      <span class="font-semibold"
+        >The Joyous Singers, a Louisville 55 and over choral group, is searching for new singers as we begin our
+        2025-2026 season.</span
+      >
+
+      <br /><br />
+      Joyous Singers, Inc. is a community chorus for people who love to sing and welcome the challenge of learning and performing
+      a wide variety of choral music. Whether Soprano, Alto, Tenor or Bass, we welcome new voices. And we welcome all new
+      singers, regardless of your chorale experience.
+      <br /><br />
+      Founded in 2000, Joyous Singers has performed for many audiences in the Kentuckiana community.
+    </Fragment>
+  </Hero2>
 
   <!-- custom, display 3 pics from Gallery and link to Gallery -->
 

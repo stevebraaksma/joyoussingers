@@ -5,6 +5,7 @@ import ContactUs from '~/components/widgets/Contact.astro';
 // import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features4 from '~/components/widgets/Features4.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
   title: 'Contact',
@@ -44,6 +45,36 @@ const metadata = {
   </Content>
 
   <HeroText tagline="Contact" title="Join Us!" />
+
+  <Steps2
+    title="Ways to get in touch"
+    id="contact-us"
+    subtitle="Have questions? Feel free to contact us!"
+    items={[
+      {
+        title: 'Email us',
+        description: 'joyoussingersinc@gmail.com ',
+        icon: 'tabler:mail',
+        link: 'mailto:joyoussingersinc@gmail.com ',
+      },
+      {
+        title: 'Call us',
+        description: '(502) 830-9709',
+        icon: 'tabler:headset',
+        link: 'tel:5028309709',
+      },
+      {
+        title: 'Follow us on Facebook',
+        description: 'JoyousSingers',
+        icon: 'tabler:brand-facebook',
+        link: 'https://www.facebook.com/JoyousSingers/',
+      },
+    ]}
+  />
+
+  <!-- title="Reach out to us"
+  id="contact-us"
+  subtitle="Have questions? Feel free to contact us!" -->
 
   <ContactUs
     id="form"

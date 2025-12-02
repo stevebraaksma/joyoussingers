@@ -13,6 +13,7 @@ const {
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  image2 = await Astro.slots.render('image2'),
 
   id,
   bg = await Astro.slots.render('bg'),
@@ -53,6 +54,48 @@ const {
             />
           )
         }
+
+        <!-- {
+          image2 && (
+            <img
+              src={image2}
+              alt={alt2 || 'Secondary image'}
+              class="absolute inset-0 object-cover w-full h-full opacity-50"
+            />
+          )
+        } -->
+
+        <div
+          class="intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+        >
+          {
+            image2 && (
+              <div class="relative m-auto max-w-5xl">
+                {typeof image2 === 'string' ? (
+                  <Fragment set:html={image2} />
+                ) : (
+                  // <Image
+                  //   class="mx-auto rounded-md w-full"
+                  //   widths={[400, 768, 1024, 2040]}
+                  //   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                  //   loading="eager"
+                  //   width={1024}
+                  //   height={576}
+                  //   {...image2}
+                  // />
+                  <Image
+                    class="mx-auto rounded-md w-full my-10"
+                    widths={[400, 768, 1024, 2040]}
+                    sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                    loading="eager"
+                    {...image2}
+                  />
+                )}
+              </div>
+            )
+          }
+        </div>
+
         <div class="max-w-2xl mx-auto">
           {
             subtitle && (
@@ -80,17 +123,19 @@ const {
         </div>
         {content && <Fragment set:html={content} />}
       </div>
-      <div
+      <!-- <div
         class="intersect-once intercept-no-queue intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-      >
+      > -->
+      <div class="">
         {
           image && (
+            // <div class="relative m-auto max-w-5xl">
             <div class="relative m-auto max-w-5xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class="mx-auto rounded-md h-full"
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   loading="eager"

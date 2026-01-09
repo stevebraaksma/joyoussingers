@@ -25,9 +25,9 @@ const metadata = {
       },
       { text: 'Join Us', href: '#recruiting' },
     ]}
-    image={{ src: '~/assets/images/2019-JS-Christmas.jpeg', alt: 'Joyous Singers' }}
-    image2={{ src: '~/assets/images/joyous-christmas.jpg', alt: 'Joyous Singers in Concert' }}
+    image={{ src: '~/assets/images/full-group-photo-2025.jpg', alt: 'Joyous Singers' }}
   >
+    <!--   Re: above, at one time this image2 was created, for Christmas announcement  image2={{ src: '~/assets/images/joyous-christmas.jpg', alt: 'Joyous Singers in Concert' }}  -->
     <Fragment slot="title">
       Joyous
       <span class="text-accent dark:text-white highlight"> Singers</span>
@@ -44,7 +44,7 @@ const metadata = {
     </Fragment> -->
 
     <Fragment slot="subtitle">
-      <strong>
+      <strong class="hidden">
         PLEASE JOIN US FOR OUR 25TH ANNIVERSARY CHRISTMAS CONCERT <br />Sunday December 14th, 2:00 PM<br />
         Lyndon Baptist Church <br /> 8025 New La Grange Rd, Louisville, KY <br />For More Information, Phone
         502-830-9709<br /><br /></strong
@@ -74,6 +74,27 @@ const metadata = {
 
   <!-- Features3 Widget ************** -->
 
+  <div
+    class="relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade pt-0 md:pt-0 lg:pt-0"
+    data-astro-source-file="/Users/stevebraaksma/Desktop/PROJECTS/joyoussingers/src/components/ui/WidgetWrapper.astro"
+    data-astro-source-loc="31:4"
+    data-animated="true"
+    style="transition-delay: 0ms; animation-delay: 0ms;"
+  >
+    <div>
+      <iframe
+        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1228770339122979%2F&show_text=false&width=560&t=0"
+        width="560"
+        height="314"
+        class="mt-6 mx-auto max-w-3xl text-center"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+  </div>
+
   <Features3
     columns={3}
     isAfterContent={true}
@@ -90,13 +111,14 @@ const metadata = {
         icon: 'tabler:template',
       },
       {
-        title: 'First Rehearsal for Fall 2025 season',
-        description: 'Thursday, September 4th at 9:30 AM',
+        title: 'First Rehearsal for Spring 2026 season',
+        description: 'TBD',
         icon: 'tabler:template',
       },
     ]}
-    image={{ src: '~/assets/images/red-tones.jpg', alt: 'Joyous Singers in Concert' }}
   />
+
+  <!-- image={{ src: '~/assets/images/red-tones.jpg', alt: 'Joyous Singers in Concert' }} -->
 
   <!-- Steps2 Widget ****************** -->
 
@@ -199,12 +221,11 @@ const metadata = {
         style="transition-delay: 0ms; animation-delay: 0ms;"
       >
         <div class="relative bg-gray-400 dark:bg-slate-700 mb-6 md:h-64 rounded shadow-lg">
-          <!-- <a href="/get-started-website-with-astro-tailwind-css"> -->
           <img
             alt="Get started with AstroWind to create a website using Astro and Tailwind CSS"
             class="w-full shadow-lg bg-gray-400 dark:bg-slate-700 md:h-full rounded"
             loading="lazy"
-            src="/images/5-5ChoraleReception2.jpg"
+            src="/images/201.jpg"
             crossorigin="anonymous"
             decoding="async"
             height="225"
@@ -213,31 +234,20 @@ const metadata = {
             style="object-fit:cover;object-position:center;max-width:100%;max-height:100%"
             width="400"
           />
-          <!-- </a> -->
         </div>
-        <!-- <h3 class="font-bold text-xl dark:text-slate-300 font-heading leading-tight mb-2 sm:text-2xl">
-          <a
-            href="/get-started-website-with-astro-tailwind-css"
-            class="transition duration-200 dark:hover:text-blue-700 ease-in hover:text-primary inline-block"
-            >Get started with AstroWind to create a website using Astro and Tailwind CSS</a
-          >
-        </h3>
-        <p class="text-muted dark:text-slate-400 text-lg">
-          Start your web journey with AstroWind – harness Astro and Tailwind CSS for a stunning site. Explore our guide
-          now.
-        </p> -->
-      </article><article
+      </article>
+
+      <article
         class="intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter mb-6 transition"
         data-animated="true"
         style="transition-delay: 100ms; animation-delay: 100ms;"
       >
         <div class="relative bg-gray-400 dark:bg-slate-700 mb-6 md:h-64 rounded shadow-lg">
-          <!-- <a href="/useful-resources-to-create-websites"> -->
           <img
             alt="Useful tools and resources to create a professional website"
             class="w-full shadow-lg bg-gray-400 dark:bg-slate-700 md:h-full rounded"
             loading="lazy"
-            src="/images/5-18Chorale.jpg"
+            src="/images/202.jpg"
             crossorigin="anonymous"
             decoding="async"
             height="225"
@@ -246,28 +256,39 @@ const metadata = {
             style="object-fit:cover;object-position:top;max-width:100%;max-height:100%"
             width="400"
           />
-          <!-- </a> -->
         </div>
-        <!-- <h3 class="font-bold text-xl dark:text-slate-300 font-heading leading-tight mb-2 sm:text-2xl">
-          <a
-            href="/useful-resources-to-create-websites"
-            class="transition duration-200 dark:hover:text-blue-700 ease-in hover:text-primary inline-block"
-            >Useful tools and resources to create a professional website</a
-          >
-        </h3>
-        <p class="text-muted dark:text-slate-400 text-lg">
-          Explore vital tools and resources for a sleek website. From design to functionality, our guide elevates your
-          online presence.
-        </p> -->
-      </article><article
+      </article>
+
+      <article
         class="intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter mb-6 transition"
         data-animated="true"
         style="transition-delay: 200ms; animation-delay: 200ms;"
       >
         <div class="relative bg-gray-400 dark:bg-slate-700 mb-6 md:h-64 rounded shadow-lg">
-          <!-- <a href="/how-to-customize-astrowind-to-your-brand"> -->
           <img
             alt="How to customize AstroWind template to suit your branding"
+            class="w-full shadow-lg bg-gray-400 dark:bg-slate-700 md:h-full rounded"
+            loading="lazy"
+            src="/images/203.jpg"
+            crossorigin="anonymous"
+            decoding="async"
+            height="225"
+            referrerpolicy="no-referrer"
+            sizes="(max-width: 900px) 400px, 900px"
+            style="object-fit:cover;object-position:center;max-width:100%;max-height:100%"
+            width="400"
+          />
+        </div>
+      </article>
+
+      <article
+        class="intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter mb-6 transition"
+        data-animated="true"
+        style="transition-delay: 300ms; animation-delay: 300ms;"
+      >
+        <div class="relative bg-gray-400 dark:bg-slate-700 mb-6 md:h-64 rounded shadow-lg">
+          <img
+            alt="AstroWind template in depth"
             class="w-full shadow-lg bg-gray-400 dark:bg-slate-700 md:h-full rounded"
             loading="lazy"
             src="/images/10-25Chorale Practice.jpg"
@@ -279,52 +300,7 @@ const metadata = {
             style="object-fit:cover;object-position:center;max-width:100%;max-height:100%"
             width="400"
           />
-          <!-- </a> -->
         </div>
-        <!-- <h3 class="font-bold text-xl dark:text-slate-300 font-heading leading-tight mb-2 sm:text-2xl">
-          <a
-            href="/how-to-customize-astrowind-to-your-brand"
-            class="transition duration-200 dark:hover:text-blue-700 ease-in hover:text-primary inline-block"
-            >How to customize AstroWind template to suit your branding</a
-          >
-        </h3>
-        <p class="text-muted dark:text-slate-400 text-lg">
-          Personalize AstroWind template for your brand. Our guide unlocks seamless customization steps for a unique
-          online presence.
-        </p> -->
-      </article><article
-        class="intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter mb-6 transition"
-        data-animated="true"
-        style="transition-delay: 300ms; animation-delay: 300ms;"
-      >
-        <div class="relative bg-gray-400 dark:bg-slate-700 mb-6 md:h-64 rounded shadow-lg">
-          <!-- <a href="/astrowind-template-in-depth"> -->
-          <img
-            alt="AstroWind template in depth"
-            class="w-full shadow-lg bg-gray-400 dark:bg-slate-700 md:h-full rounded"
-            loading="lazy"
-            src="/images/2021-Practice.jpg"
-            crossorigin="anonymous"
-            decoding="async"
-            height="225"
-            referrerpolicy="no-referrer"
-            sizes="(max-width: 900px) 400px, 900px"
-            style="object-fit:cover;object-position:center;max-width:100%;max-height:100%"
-            width="400"
-          />
-          <!-- </a> -->
-        </div>
-        <!-- <h3 class="font-bold text-xl dark:text-slate-300 font-heading leading-tight mb-2 sm:text-2xl">
-          <a
-            href="/astrowind-template-in-depth"
-            class="transition duration-200 dark:hover:text-blue-700 ease-in hover:text-primary inline-block"
-            >AstroWind template in depth</a
-          >
-        </h3>
-        <p class="text-muted dark:text-slate-400 text-lg">
-          While easy to get started, Astrowind is quite complex internally. This page provides documentation on some of
-          the more intricate parts.
-        </p> -->
       </article>
     </div>
 

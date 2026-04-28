@@ -8,6 +8,7 @@ const {
   title = await Astro.slots.render('title'),
   subheading = await Astro.slots.render('subheading'),
   subtitle = await Astro.slots.render('subtitle'),
+  defaultContent = await Astro.slots.render('default'),
   tagline,
 
   content = await Astro.slots.render('content'),
@@ -54,7 +55,6 @@ const {
             />
           )
         }
-
         <!-- {
           image2 && (
             <img
@@ -95,6 +95,7 @@ const {
             )
           }
         </div>
+        {defaultContent && <Fragment set:html={defaultContent} />}
 
         <div class="max-w-2xl mx-auto">
           {

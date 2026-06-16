@@ -7,6 +7,7 @@ import Header from '~/components/widgets/Header.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features4 from '~/components/widgets/Features4.astro';
+import EventsPlaceholder from '~/components/widgets/EventsPlaceholder.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
@@ -40,10 +41,11 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Features3 Widget ************** -->
 
   <Features4 id="features" title="Events" tagline="" columns={2} />
   <!-- subtitle="We are now Rehearsing for our Holiday Concerts. Join us today and SING OUT." -->
+
+  <EventsPlaceholder />
 
   <Content
     items={[

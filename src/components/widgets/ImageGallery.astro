@@ -1,0 +1,76 @@
+---
+import bats1 from '~/assets/images/bats1.jpeg';
+import bats2 from '~/assets/images/bats2.jpeg';
+import bats3 from '~/assets/images/bats3.jpeg';
+import bats4 from '~/assets/images/bats4.jpeg';
+import bats5 from '~/assets/images/bats5.jpeg';
+
+const images = [bats1, bats2, bats3, bats4, bats5];
+---
+
+<div class="image-gallery mt-8" data-gallery>
+  <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+    {
+      images.map((image, index) => (
+        <button
+          type="button"
+          class="group relative overflow-hidden rounded-lg bg-gray-400 shadow-lg dark:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          data-gallery-thumb
+          data-src={image.src}
+          aria-label={`Open image ${index + 1}`}
+        >
+          <img
+            src={image.src}
+            alt=""
+            class="aspect-square w-full object-cover transition duration-300 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+        </button>
+      ))
+    }
+  </div>
+
+  <dialog
+    class="gallery-dialog m-0 h-dvh max-h-dvh w-dvw max-w-dvw border-0 bg-transparent p-0 backdrop:bg-black/90"
+    data-gallery-dialog
+  >
+    <div class="relative flex h-full w-full items-center justify-center p-4 md:p-8">
+      <button
+        type="button"
+        class="absolute right-4 top-4 z-10 rounded-full bg-black/60 px-3 py-1 text-3xl leading-none text-white transition hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        data-gallery-close
+        aria-label="Close"
+      >
+        &times;
+      </button>
+      <img class="max-h-full max-w-full object-contain" data-gallery-full alt="" />
+    </div>
+  </dialog>
+</div>
+
+<script>
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const dialog = gallery.querySelector('[data-gallery-dialog]');
+    const fullImage = gallery.querySelector('[data-gallery-full]');
+    const closeButton = gallery.querySelector('[data-gallery-close]');
+
+    if (!(dialog instanceof HTMLDialogElement) || !(fullImage instanceof HTMLImageElement)) return;
+
+    gallery.querySelectorAll('[data-gallery-thumb]').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        const src = thumb.getAttribute('data-src');
+        if (!src) return;
+
+        fullImage.src = src;
+        dialog.showModal();
+      });
+    });
+
+    closeButton?.addEventListener('click', () => dialog.close());
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+</script>
